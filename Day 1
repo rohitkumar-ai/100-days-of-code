@@ -1,0 +1,10 @@
+Day 1
+Write a simple program to print your name, class.
+#include <iostream>
+using namespace std;
+int main()
+{
+cout << "My name is Rohit kumar" << endl;
+cout << "Class: 11-B ." << endl;
+return 0;
+}
