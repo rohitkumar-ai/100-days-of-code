@@ -1,0 +1,37 @@
+Day 5
+Program To Accept Student Roll No, Marks
+in 3 Subjects and Calculate Total, Average and Print it.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rollNo, sub1, sub2, sub3, total;
+    float average;
+
+    // Input section
+    cout << "Enter Student Roll No: ";
+    cin >> rollNo;
+
+    cout << "Enter First Subject Marks: ";
+    cin >> sub1;
+
+    cout << "Enter Second Subject Marks: ";
+    cin >> sub2;
+
+    cout << "Enter Third Subject Marks: ";
+    cin >> sub3;
+
+    // Calculations
+    total = sub1 + sub2 + sub3;
+    average = total / 3.0;  // Use 3.0 to get float result
+
+    // Output section
+    cout << "\n\n\t\t VIT Bhopal University \n\n";
+    cout << "\t Student Roll No : " << rollNo << endl;
+    cout << "\t First Subject Marks : " << sub1 << endl;
+    cout << "\t Second Subject Marks : " << sub2 << endl;
+    cout << "\t Third Subject Marks : " << sub3 << endl;
+    cout << "\t Average Marks : " << average << endl;
+
+    return 0;
+}
