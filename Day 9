@@ -1,0 +1,30 @@
+Day 9
+convert a decimal number to  binary number
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i = 0;
+    int a[32]; // Enough for 32-bit integers
+    
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    if (n == 0) {
+        cout << "The binary conversion of 0 is 0";
+        return 0;
+    }
+    
+    int temp = n;
+    while (temp > 0) {
+        a[i++] = temp % 2;
+        temp /= 2;
+    }
+    
+    cout << "The binary conversion of " << n << " is ";
+    for (int j = i - 1; j >= 0; --j) {
+        cout << a[j];
+    }
+    
+    return 0;
+}
