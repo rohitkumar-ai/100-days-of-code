@@ -1,0 +1,20 @@
+Day 11
+swap to numbers using a third variable called temp.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 40;
+    int b = 20;
+    
+    cout << "Value of a (before swap): " << a << endl;
+    cout << "Value of b (before swap): " << b << endl;
+    
+    swap(a, b);  // Using the standard library swap function
+    
+    cout << "Value of a (after swap): " << a << endl;
+    cout << "Value of b (after swap): " << b << endl;
+    
+    return 0;
+}
