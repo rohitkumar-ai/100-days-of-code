@@ -1,0 +1,11 @@
+Day 13
+print natural numbers from 1 to10 in Reverse
+# include <iostream>
+using namespace std;
+int main( )
+{
+int i;
+for (i=10; i>=1; i--)
+cout<<i<<" ";
+return 0;
+}
