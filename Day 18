@@ -1,0 +1,53 @@
+Day 18
+Checks if the input number is odd or even
+
+Asks the user whether they want odd or even tables
+
+Takes a range for the table (up to which multiple)
+#include<iostream>
+using namespace std;
+
+int main() {
+    int num, choice, range;
+    
+    cout << "Enter a number to check and generate its table: ";
+    cin >> num;
+    
+    // Check if number is odd or even
+    if(num % 2 == 0) {
+        cout << num << " is an EVEN number.\n";
+    } else {
+        cout << num << " is an ODD number.\n";
+    }
+    
+    cout << "\nWhich multiples do you want to display?\n";
+    cout << "1. Odd multiples only\n";
+    cout << "2. Even multiples only\n";
+    cout << "3. All multiples\n";
+    cout << "Enter your choice (1-3): ";
+    cin >> choice;
+    
+    cout << "\nEnter the table range (up to which multiple): ";
+    cin >> range;
+    
+    cout << "\nMultiplication Table for " << num << ":\n\n";
+    
+    for(int i = 1; i <= range; i++) {
+        int product = num * i;
+        
+        // Check which multiples to display based on user choice
+        bool display = false;
+        switch(choice) {
+            case 1: display = (product % 2 != 0); break; // Odd products
+            case 2: display = (product % 2 == 0); break; // Even products
+            case 3: display = true; break;               // All products
+            default: cout << "Invalid choice!\n"; return 1;
+        }
+        
+        if(display) {
+            cout << "\t" << num << " x " << i << " = " << product << "\n";
+        }
+    }
+    
+    return 0;
+}
