@@ -1,0 +1,33 @@
+Day 19
+Read ‘n’ number and print them in matrix terms in all orders.
+# include <stdio.h>
+#include<iostream>
+
+using namespace std;
+int main( )
+{
+int i,n,c,p,q,r,k,a[20];
+cout<<"enter the array size";
+cin>>n;
+cout<<"enter the elements";
+for(i=1;i<=n;i++)
+cin>>a[i];
+i=1;
+while(i<=n)
+{
+if(n%i==0)
+{
+r=i;
+c=n/i;
+k=1;
+for(p=1;p<=r;p++)
+{
+for(q=1;q<=c;q++)
+cout<<a[k++];
+cout<<"\n";
+}
+i++;
+return 0;
+}
+}
+}
