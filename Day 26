@@ -1,0 +1,21 @@
+Day 26
+calculate and print the sum of even
+and odd integers of the first n natural numbers
+#include<iostream>
+using namespace std;
+int main()
+{
+int n,i,sumeven=0,sumodd=0;
+cout<<"Enter value of n:";
+cin>>n;
+for(i=1;i<=n;++i)
+{
+if(i%2==0)
+sumeven+=i;
+else
+sumodd+=i;
+}
+cout<<"\nSum of even Numbers is "<<sumeven;
+cout<<"\nSUm of odd Numbers is "<<sumodd;
+return 0;
+}
