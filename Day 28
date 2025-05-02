@@ -1,0 +1,20 @@
+Day 28
+find area of a triangle when there sides are given.
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main( )
+{
+int a,b,c;
+float s, area;
+cout<<"enter there sides of the triangle";
+cin>>a>>b>>c;
+if((a+b)<c||(b+c)<a||(a+c)<b)
+cout<<"finding area is not possible";
+else
+s=(a+b+c)/2;
+area=sqrt(s*(s-a)*(s-b)*(s-c));
+cout<<"area="<<area;
+return 0;
+}
