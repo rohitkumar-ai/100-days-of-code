@@ -1,0 +1,20 @@
+Day 29
+find whether a number is divisible by ‘11’ or not without actual division.
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (n % 11 == 0) {
+        cout << "Yes, the number is divisible by 11";
+    } else {
+        int toAdd = 11 - (n % 11); // smallest number to add
+        cout << "No, the number is not divisible by 11\n";
+        cout << "Add " << toAdd << " to make it divisible by 11 (Result: " << n + toAdd << ")";
+    }
+
+    return 0;
+}
