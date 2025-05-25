@@ -1,0 +1,21 @@
+Day 34
+3 sum of python
+
+arr = [1, 4, 45, 6, 10, 8, 13]
+arr.sort()
+sum = 22
+s = len(arr)
+
+for i in range(s - 2):
+    l = i + 1
+    r = s - 1
+    while l < r:
+        current_sum = arr[i] + arr[l] + arr[r]
+        if current_sum == sum:
+            print("Three sum =", arr[i], arr[l], arr[r])
+            l += 1
+            r -= 1
+        elif current_sum < sum:
+            l += 1
+        else:
+            r -= 1
