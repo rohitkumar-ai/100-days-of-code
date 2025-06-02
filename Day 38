@@ -1,0 +1,50 @@
+Day 38
+IF ELSE LOOP PROBLEM SOLUTION IN PYTHON 
+
+1. Problem Is eligible for voting or not  check it?
+
+a=int(input("Enter your age:"));
+if a>=18:
+    print("Eligible to vote");
+else:
+    print("Not eligible to vote");
+
+
+2. write a prograame to find max between two number ?
+
+a=int(input("Enter 1st number:"));
+b=int(input("Enter 2nd number:"));
+
+if a>b:
+    print("Max number =",a);
+else:
+    print("Max number =",b);
+
+3. write a programme between 3 numbers?
+a=int(input("Enter 1st number:"));
+b=int(input("Enter 2nd number:"));
+c=int(input("Enter 3rd number:"));
+
+
+
+if a>b and a>c:
+    print("Max number =",a);
+elif b>a and b>c:
+    print("Max number =",b);
+
+else:
+    print("Max number=",c);
+
+4. write a prograame to check the number Positive or negative or zero ?
+a=int(input("Enter 1st number:"));
+if a>0:
+    print("The numberis positive")
+elif a>0:
+    print("Number is negative")
+else:
+    print("Zero")
+
+
+
+
+
