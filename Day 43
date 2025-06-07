@@ -1,0 +1,23 @@
+Day 43
+https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/submissions/1656198460/?envType=daily-question&envId=2025-06-07
+class Solution {
+ public:
+  string clearStars(string s) {
+    string res = s;
+    vector<vector<int>> buckets(26);
+
+    for (int i = 0; i < s.length(); ++i)
+      if (s[i] == '*') {
+        res[i] = ' ';
+        int j = 0;
+        while (buckets[j].empty())
+          ++j;
+        res[buckets[j].back()] = ' ', buckets[j].pop_back();
+      } else {
+        buckets[s[i] - 'a'].push_back(i);
+      }
+
+    std::erase(res, ' ');
+    return res;
+  }
+};
