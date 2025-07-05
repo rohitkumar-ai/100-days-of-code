@@ -1,0 +1,16 @@
+Day 63
+class Solution {
+public:
+    int maxSum(vector<int> &arr) 
+    {
+        int res=arr[0], curr=arr[0], n=arr.size();
+        
+        for(int i=1; i<n; i++) {
+            res=max(curr+arr[i],res);
+            curr=arr[i];
+        }
+        
+        return res;
+    }
+};
+ 
